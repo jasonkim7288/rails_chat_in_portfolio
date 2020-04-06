@@ -33,7 +33,8 @@
                 <div class="underscore"></div>
             </div>
             <div class="btn-wrapper">
-                <a href="about.html" class="hover-wrapper"></a>
+                <%# <a href="about.html" class="hover-wrapper"></a> %>
+                <%= link_to("", {:action => 'about'} , class: "hover-wrapper") %>                
                 <div class="menu-icon">
                     <i class="fas fa-address-card"></i>
                 </div>
