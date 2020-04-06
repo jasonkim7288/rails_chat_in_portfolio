@@ -38,31 +38,38 @@
                 <div class="menu-icon">
                     <i class="fas fa-address-card"></i>
                 </div>
-                <a href="about.html" class="menu-string">About</a>
+                <%# <a href="about.html" class="menu-string">About</a> %>
+                <%= link_to("About", {:action => 'about'} , class: "menu-string") %>
                 <div class="underscore"></div>
             </div>
             <div class="btn-wrapper">
-                <a href="projects.html" class="hover-wrapper"></a>
+                <%# <a href="projects.html" class="hover-wrapper"></a> %>
+                <%= link_to("", {:action => 'projects'} , class: "hover-wrapper") %>                
                 <div class="menu-icon">
                     <i class="fas fa-laptop-code"></i>
                 </div>
-                <a href="projects.html" class="menu-string">Projects</a>
+                <%# <a href="projects.html" class="menu-string">Projects</a> %>
+                <%= link_to("Project", {:action => 'project'} , class: "menu-string") %>
                 <div class="underscore"></div>
             </div>
             <div class="btn-wrapper">
-                <a href="blog.html" class="hover-wrapper"></a>
+                <%# <a href="blog.html" class="hover-wrapper"></a> %>
+                <%= link_to("", {:action => 'blog'} , class: "hover-wrapper") %>                
                 <div class="menu-icon">
                     <i class="far fa-newspaper"></i>
                 </div>
-                <a href="blog.html" class="menu-string">Blog</a>
+                <%# <a href="blog.html" class="menu-string">Blog</a> %>
+                <%= link_to("Blog", {:action => 'blog'} , class: "menu-string") %>
                 <div class="underscore"></div>
             </div>
             <div class="btn-wrapper">
-                <a href="contact.html" class="hover-wrapper"></a>
+                <%# <a href="contact.html" class="hover-wrapper"></a> %>
+                <%= link_to("", {:action => 'contact'} , class: "hover-wrapper") %>
                 <div class="menu-icon">
                     <i class="far fa-envelope"></i>
                 </div>
-                <a href="contact.html" class="menu-string">Contact</a>
+                <%# <a href="contact.html" class="menu-string">Contact</a> %>
+                <%= link_to("Contact", {:action => 'contact'} , class: "menu-string") %>
                 <div class="underscore"></div>
             </div>
         </nav>
