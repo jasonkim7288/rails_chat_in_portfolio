@@ -23,7 +23,8 @@
         <!-- menu icon only appears on small window and underscore only appears on large window-->
         <nav class="right-nav">
             <div class="btn-wrapper">
-                <a href="index.html" class="hover-wrapper"></a>
+                <%= link_to("", {:action => 'index'} , class: "hover-wrapper") %>
+                <%# <a href="index.html" class="hover-wrapper"></a> %>
                 <div class="menu-icon cur-category">
                     <i class="fas fa-home"></i>
                 </div>
