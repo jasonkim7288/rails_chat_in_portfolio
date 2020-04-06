@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-us">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="default.css" integrity="sha512-bKkvSCxEMpXkATlke24CHw3VZ4sFw+SBeSRcEGS3vog7lqk+Nq9JPPvvmt9mHcZAR3qwWZzXgX3BRZ1vnNzGew== sha384-NUzA4cQuMGPhimVu3Fo/R7uLWgLic8N9EtYrR8qG8f1vtRi3x6FuV+DqvmV/4QXt" />
+    <link rel="stylesheet" href="projects.css" integrity="sha512-kgqoOmDbwO7ey4etrz9SfU5J9dS1AS3vooVPCCGyF2j7Spj23oWTcr0Qn64LdvcQXhoS02s2AMRLomLAGHHFJQ== sha384-IYxWUIhHzQpps6ZyoXhNmURYnWlCN0vCreYhImBUbJmzY72Gw7ujRiU7vYjS331W">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    integrity="sha512-L7MWcK7FNPcwNqnLdZq86lTHYLdQqZaz5YcAgE+5cnGmlw8JT03QB2+oxL100UeB6RlzZLUxCGSS4/++mNZdxw== sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
+    <title>Projects | Jason's Portfolio</title>
+</head>
+
+<body class="bg-color">
+    <!-- main title and navigation bar -->
+    <header class="bg-color">
+        <!-- main title -->
+        <h1 id="title-top">Jason's</h1>
+        <h1 id="title-bottom">Portfolio</h1>
+        
+        <!-- menu icon only appears on small window and underscore only appears on large window-->
+            <nav class="right-nav">
+                <div class="btn-wrapper">
+                    <a href="index.html" class="hover-wrapper"></a>
+                    <div class="menu-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <a href="index.html" class="menu-string">Home</a>
+                    <div class="underscore"></div>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="about.html" class="hover-wrapper"></a>
+                    <div class="menu-icon">
+                        <i class="fas fa-address-card"></i>
+                    </div>
+                    <a href="about.html" class="menu-string">About</a>
+                    <div class="underscore"></div>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="projects.html" class="hover-wrapper"></a>
+                    <div class="menu-icon cur-category">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <a href="projects.html" class="menu-string cur-category">Projects</a>
+                    <div class="underscore"></div>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="blog.html" class="hover-wrapper"></a>
+                    <div class="menu-icon">
+                        <i class="far fa-newspaper"></i>
+                    </div>
+                    <a href="blog.html" class="menu-string">Blog</a>
+                    <div class="underscore"></div>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="contact.html" class="hover-wrapper"></a>
+                    <div class="menu-icon">
+                        <i class="far fa-envelope"></i>
+                    </div>
+                    <a href="contact.html" class="menu-string">Contact</a>
+                    <div class="underscore"></div>
+                </div>
+            </nav>
+    </header>
+
+    <!-- projects articles -->
+    <main>
+        <div class="section">
+            <article class="article-one-column">
+                <h3>Resume</h3>
+                <p>Click below icon to download</p>
+                <a href="res/JasonKimResume.pdf">
+                    <div class="links-icon-background to-little-right color-aqua">
+                        <i class="far fa-file"></i>
+                    </div>
+                </a>
+            </article>
+            <article class="article-one-column">
+                <h3>Projects</h3>
+            </article>
+            <article class="article-multi-column">
+                <div class="post">
+                    <h2>Gmail terminal application</h2>
+                    <img src="res/gmailapp.gif" alt="Gmail application gif">
+                    <p>Language : Ruby </p>
+                    <p>Gmail application will manage your Gmail account, show the email list after logged in, show the
+                        content of each email, and also let you create a new email with an file attachment. All those
+                        functions can be done with a simple command-line interface (CLI).</p>
+                    <div>
+                        <a href="https://github.com/jasonkim7288/gmail-terminal-app">
+                            <div class="links-icon-background to-left">
+                                <i class="fab fa-github"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="post">
+                    <h2>Accuweather terminal application</h2>
+                    <img src="res/weatherapp.gif" alt="Weather application gif">
+                    <p>Language : Ruby </p>
+                    <p>Weather application will display and READ the weather information based on the region you input.
+                        Accuweather APIs are utilized for getting GPS coordinates and get the weather information.</p>
+                    <p>Once the user input the city name, candidate cities which have the same name but locate in the
+                        different country or state can be listed by using AccuWeather REST Api. Each city information
+                        has it's own city id and GPS coordinates.</p>
+                    <p>After getting the city information, you can see the 5 DAY FORECAST of the city by using
+                        AccuWeather REST Api.</p>
+                    <div>
+                        <a href="https://github.com/jasonkim7288/weather_terminal_app">
+                            <div class="links-icon-background to-left">
+                                <i class="fab fa-github"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- links to github, linkedIn, twitter and facebook -->
+    <footer class="bg-color flexible-footer">
+        <a href="https://github.com/jasonkim7288" class="links-icon links-icon-background to-left">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/im-jasonkim" class="links-icon links-icon-background">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://twitter.com/jasonkim7288" class="links-icon links-icon-background">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100003947625728"
+            class="links-icon links-icon-background to-right">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+    </footer>
+</body>
+
+</html>

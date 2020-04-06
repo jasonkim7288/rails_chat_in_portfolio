@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="default.css" integrity="sha512-bKkvSCxEMpXkATlke24CHw3VZ4sFw+SBeSRcEGS3vog7lqk+Nq9JPPvvmt9mHcZAR3qwWZzXgX3BRZ1vnNzGew== sha384-NUzA4cQuMGPhimVu3Fo/R7uLWgLic8N9EtYrR8qG8f1vtRi3x6FuV+DqvmV/4QXt" />
     <link rel="stylesheet" href="bg_words.css" integrity="sha512-zjkYh2UehOclKTpK/41BGhY+X8J89pwXz5/AZGFXzAQQjavZviQ7dGGBuR/x7wunQzE2zqAIdz4Q1KePNjKFZQ== sha384-nV299rMV3hzOY44QTqD1Qifng5RhVcjl6UTPqcVJLw4Pet6YKfOxzwmBvXvFfzmO" />
-    <link rel="stylesheet" href="index.css" integrity="sha512-G7Y1Qp1Pfaj/2m/YzvBXxDDT4BJYEVzkZJHbFvPZvOr+caUdGNQn3SNBR6kqWPILk3qG729uGUex5cFrA2TXeQ== sha384-mM36FOwySZgJemxGiD4yZOweGbchMZXy3Xab1iKXMNGqaZ68AMe/couFB+kBkoho" />
+    <link rel="stylesheet" href="contact.css" integrity="sha512-a4EnTBDygvNDCimSa5BmGlvcGkD6agiUktyS2iYy26Q+Tp0ItP4Tk0Wraec4VOB9NojqYpp+s/oc9DamwQBaig== sha384-A87nKulEEC/gnHThElFyhudjBayKDrtbtxrSxvArpgm32E0G1hBtLD9gGDz2WnWO">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-    integrity="sha512-L7MWcK7FNPcwNqnLdZq86lTHYLdQqZaz5YcAgE+5cnGmlw8JT03QB2+oxL100UeB6RlzZLUxCGSS4/++mNZdxw== sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
-    <title>Home | Jason's Portfolio</title>
+        integrity="sha512-L7MWcK7FNPcwNqnLdZq86lTHYLdQqZaz5YcAgE+5cnGmlw8JT03QB2+oxL100UeB6RlzZLUxCGSS4/++mNZdxw== sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
+    <title>Contact | Jason's Portfolio</title>
 </head>
 
 <body class="bg-color">
@@ -19,15 +19,15 @@
         <!-- main title -->
         <h1 id="title-top">Jason's</h1>
         <h1 id="title-bottom">Portfolio</h1>
-        
+
         <!-- menu icon only appears on small window and underscore only appears on large window-->
         <nav class="right-nav">
             <div class="btn-wrapper">
                 <a href="index.html" class="hover-wrapper"></a>
-                <div class="menu-icon cur-category">
+                <div class="menu-icon">
                     <i class="fas fa-home"></i>
                 </div>
-                <a href="index.html" class="menu-string cur-category">Home</a>
+                <a href="index.html" class="menu-string">Home</a>
                 <div class="underscore"></div>
             </div>
             <div class="btn-wrapper">
@@ -56,10 +56,10 @@
             </div>
             <div class="btn-wrapper">
                 <a href="contact.html" class="hover-wrapper"></a>
-                <div class="menu-icon">
+                <div class="menu-icon cur-category">
                     <i class="far fa-envelope"></i>
                 </div>
-                <a href="contact.html" class="menu-string">Contact</a>
+                <a href="contact.html" class="menu-string cur-category">Contact</a>
                 <div class="underscore"></div>
             </div>
         </nav>
@@ -67,14 +67,39 @@
 
     <!-- background big texts -->
     <aside>
-        <h2><span id="bg-big-word" class="fade-in-bg-big-word">Web</span></h2>
-        <h2><span id="bg-mid-word" class="fade-in-bg-mid-word">Dev.</span></h2>
+        <h2><span id="bg-big-word" class="fade-in-bg-big-word">Mail</span></h2>
+        <h2><span id="bg-mid-word" class="fade-in-bg-mid-word">me</span></h2>
     </aside>
 
+    <!-- send a message -->
     <main>
-        <div class="section" id="type-writers">
-            <h2><span class="type-writer type-first">Hi, I am Jason.</span></h2>
-            <h2><span class="type-writer type-second">I am a Full Stack Developer.</span></h2>
+        <div class="section">
+            <article class="article-one-column">
+                <h3>I love to hear from you!</h3>
+                <form action="https://usebasin.com/f/2baf2f29f508" method="POST">
+                    <div class="contact-wrapper">
+                        <div class="contact-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="contact-wrapper">
+                        <div class="contact-icon">
+                            <i class="fas fa-at"></i>
+                        </div>
+                        <input type="email" id="email" name="email" placeholder="Your email address" required>
+                    </div>
+                    <div class="contact-wrapper">
+                        <div class="contact-icon">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                        <textarea id="message" name="message" placeholder="Your message" required></textarea>
+                    </div>
+                    <div class="contact-wrapper contact-btn">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </article>
         </div>
     </main>
 

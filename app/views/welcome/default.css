@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan+2|Caveat|Mitr&display=swap');
+
+/* define variables for phone */
+:root {
+    --header-height: 142px;
+    --footer-height: 60px;
+    --screen-width: calc(100vw - 17px);
+    --default-text-color: #f8eeee;
+    --skill-icon-font-size: 30px;
+    --skill-icon-width: 28px;
+    --skill-icon-height: 40px;
+    --progressbar-width: 150px;
+    --progressbar-width: 60vw;
+    --article-max-width: 680px;
+    --bg-color: #171b19;
+    --selected-color: #DBFF76;
+    --icon-background-color: #DEC1FF;
+}
+
+/* define variable for tablet and desktop */
+@media screen and (min-width: 576px) {
+    :root {
+        --title-height: 92px;
+        --header-height: 142px;
+        --section-max-width: 1400px;
+        --footer-height: 60px;
+        --skill-icon-font-size: 50px;
+        --skill-icon-width: 37.5px;
+        --skill-icon-height: 70px;
+        --progressbar-width: min(450px, 60vw);
+    }
+}
+
+/* navbar menu string effect */
+@keyframes menu-effect-string {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-10px);
+    }
+}
+
+/* navbar menu underscore effect */
+@keyframes progress-bar {
+    0% {
+        width: 0;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Neue Haas Grotesk W01 Disp', Helvetica, sans-serif;
+    text-rendering: optimizeLegibility;
+    color: var(--default-text-color);
+}
+
+/* remove all anchor tag attribute*/
+a {
+    text-decoration: none;
+    color: var(--default-text-color);
+}
+
+/* main background color */
+.bg-color {
+    background: var(--bg-color);
+}
+
+body {
+    width: var(--screen-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--default-text-color);
+}
+
+/* limit header width maximum 1400px */
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    height: var(--header-height);
+    background-attachment: fixed;
+    width: min(var(--section-max-width), 95vw);
+    align-items: center;
+    flex-direction: column;
+    z-index: 100;
+}
+
+#main-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: min(1200px, 95vw);
+}
+
+#title-top {
+    font-family: Caveat;
+    font-size: 40px;
+    margin-bottom: -0.733cm;
+}
+
+#title-bottom {
+    font-family: Mitr;
+    font-size: 50px;
+    margin-bottom: -10px;
+}
+
+.right-nav {
+    font-family: 'Baloo Chettan 2';
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: min(1200px, 95vw);
+}
+
+.btn-wrapper {
+    height: 50px;
+    margin: 0 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: center;
+}
+
+/* covers icon and menu string area, and link to another html*/
+.hover-wrapper {
+    position: absolute;
+    width: 48px;
+    height: 50px;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+.hover-wrapper:hover {
+    background: #EF835433;
+    transform: scale(1.1);
+}
+
+/* menu icon only appears with small screen size */
+.menu-icon {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 50px;
+    font-size: 32px;
+    color: var(--default-text-color);
+}
+
+/* navbar menu string */
+.menu-string {
+    width: 100%;
+    font-size: 0.7em;
+    color: var(--default-text-color);
+    text-align: center;
+}
+
+/* for tablet and desktop, remove menu icon and add underscore effect */
+@media screen and (min-width: 576px) {
+    .right-nav {
+        font-family: 'Baloo Chettan 2';
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+
+    .btn-wrapper {
+        margin: 0 10px;
+    }
+
+    .hover-wrapper {
+        display: none;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .menu-string {
+        width: 100%;
+        padding: 5px;
+        font-size: 1.5em;
+        color: var(--default-text-color);
+        text-align: center;
+        transition: color 0.5s 0.1s;
+    }
+
+    /* navbar menu highlight */
+    .underscore {
+        width: 0;
+        height: 5px;
+        background-color: rgb(71, 119, 117);
+        border-radius: 3px;
+        transition: width 0.5s 0.1s;
+        transform: translateY(-5px);
+        align-self: flex-start;
+    }
+
+    .menu-string:hover {
+        color: var(--default-text-color);
+        font-weight: 600;
+    }
+
+    /* animation effect when hover over the menu */
+    .menu-string:hover + .underscore {
+        width: 100%;
+        background-color: rgb(71, 119, 117);
+    }
+}
+
+/* make current menu look different*/
+.cur-category {
+    color: var(--selected-color);
+    font-weight: 900;
+}
+
+main {
+    margin-top: var(--header-height);
+    display: flex;
+    justify-content: center;
+}
+
+.section {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+article {
+    display: block;
+    color: var(--default-text-color);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 10px;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.article-one-column {
+    width: min(750px, 95vw);
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.article-multi-column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+}
+
+article h3 {
+    font-size: 28px;
+    font-weight: normal;
+}
+
+article p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 1em;
+    font-size: 17px;
+    font-weight: 100;
+    line-height: 1.58;
+}
+
+@media screen and (min-width: 576px) {
+    article h3 {
+        font-size: 40px;
+    }
+
+    article p {
+        font-size: 21px;
+    }
+}
+
+/* footer contains icons of links */
+footer {
+    position: fixed;
+    display: flex;
+    bottom: 0px;
+    width: var(--screen-width);
+    height: var(--footer-height);
+    justify-content: center;
+    align-items: center;
+}
+
+/* for the pages which cannot hold all information within screen height */
+.flexible-footer {
+    position: relative;
+    background: none;
+}
+
+/* margin for icons */
+.links-icon {
+    margin: 5px;
+}
+
+@media screen and (min-width: 576px) {
+    .links-icon {
+        margin: 30px;
+    }
+}
+
+/* animation effect when hovering over icons */
+.links-icon-background {
+    width: 50px;
+    height: 50px;
+    background: inherit;
+    border-radius: 50%;
+    font-size: 32px;
+    padding-left: 12px;
+    color: var(--icon-background-color);
+    display: flex;
+    align-items: center;
+    transform: scale(1);
+    transition: all 1s;
+}
+
+.links-icon-background:hover {
+    background: #5b74bb;
+    transform: scale(1.3);
+}
+
+/* slight adjustment for each icon */
+.to-left {
+    padding-left: 10px;
+}
+
+.to-right {
+    padding-left: 15px;
+}
+
+.to-little-right {
+    padding-left: 13px;
+}
+
+.to-top {
+    transform: translateY(-3px);
+}
+
+/* change the color */
+.color-aqua {
+    color: var(--selected-color);
+}
+

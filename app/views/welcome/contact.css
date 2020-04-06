@@ -1,0 +1,71 @@
+/* wrapping contact icon and input area */
+.contact-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px;
+}
+
+/* contact icons like name, email, message icons */
+.contact-btn {
+    flex-direction: column;
+}
+
+/* form for seding message */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 20px;
+}
+
+/* remove the contact icon if the screen size is small */
+.contact-icon {
+    display: none;
+}
+
+/* message information attributes */
+input, textarea {
+    padding: 0.4em 0.4em 0.2em;
+    font-family: 'Neue Haas Grotesk W01 Disp', Helvetica, sans-serif;
+    font-size: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .5) inset;
+    min-width: 0;
+    width: 95vw;
+    opacity: 0.85;
+}
+
+/* message should be larger */
+#message {
+    height: 100px;
+    text-align: start;
+    overflow-wrap: break-word;
+}
+
+/* submit button attributes */
+form button {
+    background: #58FCEC;
+    padding: 6px;
+    color: var(--bg-color);
+    font-size: 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-end;
+    z-index: 50;
+}
+
+/* larger input and text area for larger screen */
+@media screen and (min-width: 576px) {
+    input, textarea {
+        width: min(680px, 95vw);
+    }
+
+    .contact-icon {
+        display: inline-block;
+        font-size: 32px;
+        color: var(--default-text-color);;
+        margin-right: 10px;
+        width: 44px;
+    }
+}

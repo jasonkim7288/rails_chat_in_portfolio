@@ -6,11 +6,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="default.css" integrity="sha512-bKkvSCxEMpXkATlke24CHw3VZ4sFw+SBeSRcEGS3vog7lqk+Nq9JPPvvmt9mHcZAR3qwWZzXgX3BRZ1vnNzGew== sha384-NUzA4cQuMGPhimVu3Fo/R7uLWgLic8N9EtYrR8qG8f1vtRi3x6FuV+DqvmV/4QXt" />
-    <link rel="stylesheet" href="bg_words.css" integrity="sha512-zjkYh2UehOclKTpK/41BGhY+X8J89pwXz5/AZGFXzAQQjavZviQ7dGGBuR/x7wunQzE2zqAIdz4Q1KePNjKFZQ== sha384-nV299rMV3hzOY44QTqD1Qifng5RhVcjl6UTPqcVJLw4Pet6YKfOxzwmBvXvFfzmO" />
-    <link rel="stylesheet" href="index.css" integrity="sha512-G7Y1Qp1Pfaj/2m/YzvBXxDDT4BJYEVzkZJHbFvPZvOr+caUdGNQn3SNBR6kqWPILk3qG729uGUex5cFrA2TXeQ== sha384-mM36FOwySZgJemxGiD4yZOweGbchMZXy3Xab1iKXMNGqaZ68AMe/couFB+kBkoho" />
+    <link rel="stylesheet" href="blog.css" integrity="sha512-rT5T0zAaL7EobJgNozpWdjKL6JSZkyKBMGHQFKzmxjthekEoSsrY3rr1tcAc48h5NqVuw4GrcDTgaw0mDoZY7Q== sha384-jkCCSx9Lgmm2svYtEE4qfHzPEw4ejxbJhLkb5tnd9asXhmG48DhjsAurRz5A/wX9">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
     integrity="sha512-L7MWcK7FNPcwNqnLdZq86lTHYLdQqZaz5YcAgE+5cnGmlw8JT03QB2+oxL100UeB6RlzZLUxCGSS4/++mNZdxw== sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
-    <title>Home | Jason's Portfolio</title>
+    <title>Blog | Jason's Portfolio</title>
 </head>
 
 <body class="bg-color">
@@ -19,15 +18,15 @@
         <!-- main title -->
         <h1 id="title-top">Jason's</h1>
         <h1 id="title-bottom">Portfolio</h1>
-        
+
         <!-- menu icon only appears on small window and underscore only appears on large window-->
         <nav class="right-nav">
             <div class="btn-wrapper">
                 <a href="index.html" class="hover-wrapper"></a>
-                <div class="menu-icon cur-category">
+                <div class="menu-icon">
                     <i class="fas fa-home"></i>
                 </div>
-                <a href="index.html" class="menu-string cur-category">Home</a>
+                <a href="index.html" class="menu-string">Home</a>
                 <div class="underscore"></div>
             </div>
             <div class="btn-wrapper">
@@ -48,10 +47,10 @@
             </div>
             <div class="btn-wrapper">
                 <a href="blog.html" class="hover-wrapper"></a>
-                <div class="menu-icon">
+                <div class="menu-icon cur-category">
                     <i class="far fa-newspaper"></i>
                 </div>
-                <a href="blog.html" class="menu-string">Blog</a>
+                <a href="blog.html" class="menu-string cur-category">Blog</a>
                 <div class="underscore"></div>
             </div>
             <div class="btn-wrapper">
@@ -65,21 +64,42 @@
         </nav>
     </header>
 
-    <!-- background big texts -->
-    <aside>
-        <h2><span id="bg-big-word" class="fade-in-bg-big-word">Web</span></h2>
-        <h2><span id="bg-mid-word" class="fade-in-bg-mid-word">Dev.</span></h2>
-    </aside>
-
+    <!-- blog main -->
     <main>
-        <div class="section" id="type-writers">
-            <h2><span class="type-writer type-first">Hi, I am Jason.</span></h2>
-            <h2><span class="type-writer type-second">I am a Full Stack Developer.</span></h2>
+        <div class="section">
+            <article class="article-one-column">
+                <h3>My new journey as a full stack developer has been started</h3>
+                <div class="author-info">
+                    <img src="res/author_1.png" alt="Author" />
+                    <div class="author-detail">
+                        <h4>Jason Kim</h4>
+                        <h4>Feb 24 2020</h4>
+                    </div>
+                </div>
+                <img class="blog-main-img"
+                    src="https://images.unsplash.com/photo-1471922694854-ff1b63b20054?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                    alt="main blog image" />
+                <p>Joining Coder Acedamy was one of the best choice that I have ever made recently.</p>
+                <p>I felt like I was alive when discussing and pair programming with other students, and every student
+                    in the class would feel the same way. I am looking forward what kind of person as a full stack
+                    developer I would be at the end of this course.
+                </p>
+            </article>
+            <div id="blog-pages-index">
+                <h2>&lt;
+                    <label class="cur-page">1</label>
+                    <label><a href="2020/blog_02_03.html">2</a></label>
+                    <label><a href="2020/blog_09_03.html">3</a></label>
+                    <label><a href="2020/blog_16_03.html">4</a></label>
+                    <label><a href="2020/blog_23_03.html">5</a></label>
+                    &gt;
+                </h2>
+            </div>
         </div>
     </main>
 
     <!-- links to github, linkedIn, twitter and facebook -->
-    <footer class="bg-color">
+    <footer class="flexible-footer">
         <a href="https://github.com/jasonkim7288" class="links-icon links-icon-background to-left">
             <i class="fab fa-github"></i>
         </a>
