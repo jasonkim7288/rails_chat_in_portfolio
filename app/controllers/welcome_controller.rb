@@ -1,7 +1,4 @@
 class WelcomeController < ApplicationController
-  def initialize
-    @flexible_footer = ""
-  end
   def index
     @page_title = "Home"
   end
