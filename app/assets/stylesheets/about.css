@@ -56,7 +56,7 @@
     width: var(--progressbar-width);
     color: var(--default-text-color);;
     text-align: end;
-    background-image: url(image_path("images/walk.gif"));
+    background-image: url("/assets/images/walk.gif");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
