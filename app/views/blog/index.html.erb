@@ -1,2 +1,33 @@
-<h1>Blog#index</h1>
-<p>Find me in app/views/blog/index.html.erb</p>
+<!-- blog main -->
+<main>
+    <div class="section">
+        <article class="article-one-column">
+            <h3>My new journey as a full stack developer has been started</h3>
+            <div class="author-info">
+                <%= image_tag("author_1.png", :alt => "Author") %>
+                <div class="author-detail">
+                    <h4>Jason Kim</h4>
+                    <h4>Feb 24 2020</h4>
+                </div>
+            </div>
+            <img class="blog-main-img"
+                src="https://images.unsplash.com/photo-1471922694854-ff1b63b20054?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                alt="main blog image" />
+            <p>Joining Coder Acedamy was one of the best choice that I have ever made recently.</p>
+            <p>I felt like I was alive when discussing and pair programming with other students, and every student
+                in the class would feel the same way. I am looking forward what kind of person as a full stack
+                developer I would be at the end of this course.
+            </p>
+        </article>
+        <div id="blog-pages-index">
+            <h2>&lt;
+                <label class="cur-page">1</label>
+                <label><a href="2020/blog_02_03.html">2</a></label>
+                <label><a href="2020/blog_09_03.html">3</a></label>
+                <label><a href="2020/blog_16_03.html">4</a></label>
+                <label><a href="2020/blog_23_03.html">5</a></label>
+                &gt;
+            </h2>
+        </div>
+    </div>
+</main>
