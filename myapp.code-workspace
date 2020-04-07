@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "D:\\Src\\Lecture_RubyOnRails\\testapp"
+		},
+		{
+			"path": "D:\\Src\\Lecture_RubyOnRails\\heroku\\cafe"
 		}
 	],
 	"settings": {}
