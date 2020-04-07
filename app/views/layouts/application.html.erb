@@ -28,43 +28,43 @@
         <!-- menu icon only appears on small window and underscore only appears on large window-->
         <nav class="right-nav">
             <div class="btn-wrapper">
-                <%= link_to("", {:action => 'index'} , class: "hover-wrapper") %>
+                <%= link_to("", root_path , class: "hover-wrapper") %>
                 <div class="menu-icon cur-category">
                     <i class="fas fa-home"></i>
                 </div>
-                <%= link_to("Home", {:action => 'index'} , class: "menu-string cur-category") %>
+                <%= link_to("Home", root_path , class: "menu-string cur-category") %>
                 <div class="underscore"></div>
             </div>
             <div class="btn-wrapper">
-                <%= link_to("", {:action => 'about'} , class: "hover-wrapper") %>                
+                <%= link_to("", about_path , class: "hover-wrapper") %>                
                 <div class="menu-icon">
                     <i class="fas fa-address-card"></i>
                 </div>
-                <%= link_to("About", {:action => 'about'} , class: "menu-string") %>
+                <%= link_to("About", about_path , class: "menu-string") %>
                 <div class="underscore"></div>
             </div>
             <div class="btn-wrapper">
-                <%= link_to("", {:action => 'projects'} , class: "hover-wrapper") %>                
+                <%= link_to("", projects_path , class: "hover-wrapper") %>                
                 <div class="menu-icon">
                     <i class="fas fa-laptop-code"></i>
                 </div>
-                <%= link_to("Project", {:action => 'projects'} , class: "menu-string") %>
+                <%= link_to("Project", projects_path , class: "menu-string") %>
                 <div class="underscore"></div>
             </div>
             <div class="btn-wrapper">
-                <%= link_to("", {:action => 'blog'} , class: "hover-wrapper") %>                
+                <%= link_to("", blog_path , class: "hover-wrapper") %>                
                 <div class="menu-icon">
                     <i class="far fa-newspaper"></i>
                 </div>
-                <%= link_to("Blog", {:action => 'blog'} , class: "menu-string") %>
+                <%= link_to("Blog", blog_path , class: "menu-string") %>
                 <div class="underscore"></div>
             </div>
             <div class="btn-wrapper">
-                <%= link_to("", {:action => 'contact'} , class: "hover-wrapper") %>
+                <%= link_to("", contact_path , class: "hover-wrapper") %>
                 <div class="menu-icon">
                     <i class="far fa-envelope"></i>
                 </div>
-                <%= link_to("Contact", {:action => 'contact'} , class: "menu-string") %>
+                <%= link_to("Contact", contact_path , class: "menu-string") %>
                 <div class="underscore"></div>
             </div>
         </nav>
