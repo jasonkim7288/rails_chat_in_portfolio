@@ -1,3 +1,35 @@
 // Place all the styles related to the projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* there could be one or two posts in a row based on the screen size */
+.post {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 600px;
+    margin: 0 10px 30px;
+    padding: 10px;
+    background-color: #535c57;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .5) inset;
+}
+
+/* post title */
+.post h2 {
+    align-self: center;
+    font-weight: 100;
+}
+
+/* post image */
+.post img {
+    margin-top: 10px;
+    align-self: center;
+    max-width: 100%;
+}
+
+/* post content */
+.post p {
+    font-size: 1em;
+}
