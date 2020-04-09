@@ -5,17 +5,9 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
-    <link rel="stylesheet" href="default.css" integrity="sha512-bKkvSCxEMpXkATlke24CHw3VZ4sFw+SBeSRcEGS3vog7lqk+Nq9JPPvvmt9mHcZAR3qwWZzXgX3BRZ1vnNzGew== sha384-NUzA4cQuMGPhimVu3Fo/R7uLWgLic8N9EtYrR8qG8f1vtRi3x6FuV+DqvmV/4QXt" />
-    <link rel="stylesheet" href="bg_words.css" integrity="sha512-zjkYh2UehOclKTpK/41BGhY+X8J89pwXz5/AZGFXzAQQjavZviQ7dGGBuR/x7wunQzE2zqAIdz4Q1KePNjKFZQ== sha384-nV299rMV3hzOY44QTqD1Qifng5RhVcjl6UTPqcVJLw4Pet6YKfOxzwmBvXvFfzmO" />
-    <link rel="stylesheet" href="index.css" integrity="sha512-G7Y1Qp1Pfaj/2m/YzvBXxDDT4BJYEVzkZJHbFvPZvOr+caUdGNQn3SNBR6kqWPILk3qG729uGUex5cFrA2TXeQ== sha384-mM36FOwySZgJemxGiD4yZOweGbchMZXy3Xab1iKXMNGqaZ68AMe/couFB+kBkoho" />
-    <link rel="stylesheet" href="about.css" integrity="sha512-i2s3zLaSgd9Umo/wHFEHc0jlj59uBwzqlGJ78nHCaCmx53hWS2NYAzFHRYqHlsPnXbsF6MN4K+0zD/LlFX2+hg== sha384-Fs0FjIM8hBJ3ELgJKv61lisuq2+QNM9eqN50KczpczJ0rwoCFBf6/k8Kwzzwtxsh">
-    <link rel="stylesheet" href="projects.css" integrity="sha512-kgqoOmDbwO7ey4etrz9SfU5J9dS1AS3vooVPCCGyF2j7Spj23oWTcr0Qn64LdvcQXhoS02s2AMRLomLAGHHFJQ== sha384-IYxWUIhHzQpps6ZyoXhNmURYnWlCN0vCreYhImBUbJmzY72Gw7ujRiU7vYjS331W">
-    <link rel="stylesheet" href="blog.css" integrity="sha512-rT5T0zAaL7EobJgNozpWdjKL6JSZkyKBMGHQFKzmxjthekEoSsrY3rr1tcAc48h5NqVuw4GrcDTgaw0mDoZY7Q== sha384-jkCCSx9Lgmm2svYtEE4qfHzPEw4ejxbJhLkb5tnd9asXhmG48DhjsAurRz5A/wX9">
-    <link rel="stylesheet" href="contact.css" integrity="sha512-a4EnTBDygvNDCimSa5BmGlvcGkD6agiUktyS2iYy26Q+Tp0ItP4Tk0Wraec4VOB9NojqYpp+s/oc9DamwQBaig== sha384-A87nKulEEC/gnHThElFyhudjBayKDrtbtxrSxvArpgm32E0G1hBtLD9gGDz2WnWO">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
     integrity="sha512-L7MWcK7FNPcwNqnLdZq86lTHYLdQqZaz5YcAgE+5cnGmlw8JT03QB2+oxL100UeB6RlzZLUxCGSS4/++mNZdxw== sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />    
-    
+   
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -29,42 +21,42 @@
         <nav class="right-nav">
             <div class="btn-wrapper">
                 <%= link_to("", root_path , class: "hover-wrapper") %>
-                <div class="menu-icon cur-category">
+                <div class="menu-icon <%= @cur_page[:home] %>">
                     <i class="fas fa-home"></i>
                 </div>
-                <%= link_to("Home", root_path , class: "menu-string cur-category") %>
+                <a href="<%= root_path%>" class="menu-string <%= @cur_page[:home] %>">Home</a>
                 <div class="underscore"></div>
             </div>
             <div class="btn-wrapper">
-                <%= link_to("", about_path , class: "hover-wrapper") %>                
-                <div class="menu-icon">
+                <%= link_to("", about_path , class: "hover-wrapper") %>
+                <div class="menu-icon <%= @cur_page[:about] %>">
                     <i class="fas fa-address-card"></i>
                 </div>
-                <%= link_to("About", about_path , class: "menu-string") %>
+                <a href="<%= about_path%>" class="menu-string <%= @cur_page[:about] %>">About</a>
                 <div class="underscore"></div>
             </div>
             <div class="btn-wrapper">
-                <%= link_to("", projects_path , class: "hover-wrapper") %>                
-                <div class="menu-icon">
+                <%= link_to("", project_path , class: "hover-wrapper") %>                
+                <div class="menu-icon <%= @cur_page[:project] %>">
                     <i class="fas fa-laptop-code"></i>
                 </div>
-                <%= link_to("Project", projects_path , class: "menu-string") %>
+                <a href="<%= project_path%>" class="menu-string <%= @cur_page[:project] %>">Projects</a>
                 <div class="underscore"></div>
             </div>
             <div class="btn-wrapper">
                 <%= link_to("", blog_path , class: "hover-wrapper") %>                
-                <div class="menu-icon">
+                <div class="menu-icon <%= @cur_page[:blog] %>">
                     <i class="far fa-newspaper"></i>
                 </div>
-                <%= link_to("Blog", blog_path , class: "menu-string") %>
+                <a href="<%= blog_path%>" class="menu-string <%= @cur_page[:blog] %>">Blog</a>
                 <div class="underscore"></div>
             </div>
             <div class="btn-wrapper">
                 <%= link_to("", contact_path , class: "hover-wrapper") %>
-                <div class="menu-icon">
+                <div class="menu-icon <%= @cur_page[:contact] %>">
                     <i class="far fa-envelope"></i>
                 </div>
-                <%= link_to("Contact", contact_path , class: "menu-string") %>
+                <a href="<%= contact_path%>" class="menu-string <%= @cur_page[:contact] %>">Contact</a>
                 <div class="underscore"></div>
             </div>
         </nav>

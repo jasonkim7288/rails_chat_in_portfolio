@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
   get 'home/index'
   get 'about/index'
-  get 'projects/index'
+  get 'project/index'
   get 'blog/index'
   get 'contact/index'
   
   get 'home' => 'home#index'
   get 'about' => 'about#index'
-  get 'projects' => 'projects#index'
+  get 'project' => 'project#index'
   get 'blog' => 'blog#index'
   get 'contact' => 'contact#index'
 
