@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   
   get 'home' => 'home#index'
   get 'about' => 'about#index'
-  get 'project' => 'project#index'
   get 'blog' => 'blog#index'
   get 'contact' => 'contact#index'
   get 'projects' => 'projects#index'
