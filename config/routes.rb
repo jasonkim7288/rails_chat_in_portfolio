@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get "/home", to: "home#index"
   get "/about", to: "about#index"
   get "/blog", to: "blog#index"
-  get "projects" to: "projects#index"
+  get "projects", to: "projects#index"
   get "/contact", to: "contact#index"
   
   resources :projects
