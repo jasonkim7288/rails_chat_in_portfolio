@@ -14,7 +14,7 @@
             <h3>Projects</h3>
         </article>
         <article class="article-multi-column">
-            <%= @projects.each do |project| %>
+            <% @projects.each do |project| %>
               <div class="post">
                   <h2><%= project.title %></h2>
                   <%= image_tag(project.image_addr, :alt => project.image_addr) %>
