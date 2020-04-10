@@ -1,7 +1,3 @@
-// Place all the styles related to the project controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 /* there could be one or two posts in a row based on the screen size */
 .post {
     display: flex;

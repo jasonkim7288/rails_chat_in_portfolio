@@ -1,6 +1,3 @@
-// Place all the styles related to the about controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 /* container for skills list */
 #skills {
     width: fit-content;
@@ -59,7 +56,7 @@
     width: var(--progressbar-width);
     color: var(--default-text-color);;
     text-align: end;
-    // background-image: url(<%= asset_path 'walk.gif' %>);
+    /* background-image: url(<%= asset_path 'walk.gif' %>); */
     background-image: url('walk.gif');
     background-size: contain;
     background-repeat: no-repeat;
