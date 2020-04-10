@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'home/index'
-  get 'about/index'
-  get 'project/index'
-  get 'blog/index'
-  get 'contact/index'
+  resources :projects
+  get '/home/index'
+  get '/about/index'
+  get '/blog/index'
+  get '/contact/index'
   
   get 'home' => 'home#index'
   get 'about' => 'about#index'
