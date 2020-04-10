@@ -5,6 +5,10 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @projects = Project.all
+    @page_title = "Projects"
+    @flexible_footer = "flexible-footer"
+    @cur_page = Hash.new("")
+    @cur_page[:project] = "cur-category"
   end
 
   # GET /projects/1
