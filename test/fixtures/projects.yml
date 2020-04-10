@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  image_addr: MyString
+  language: MyString
+  p1: MyText
+  p2: MyText
+  p3: MyText
+  p4: MyText
+  git_addr: MyString
+
+two:
+  title: MyString
+  image_addr: MyString
+  language: MyString
+  p1: MyText
+  p2: MyText
+  p3: MyText
+  p4: MyText
+  git_addr: MyString
