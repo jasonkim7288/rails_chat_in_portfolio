@@ -1,16 +1,11 @@
 Rails.application.routes.draw do
 
-  get '/home/index'
-  get '/about/index'
-  get '/blog/index'
-  get '/contact/index'
+  get "/home", to: "home#index"
+  get "/about", to: "about#index"
+  get "/blog", to: "blog#index"
+  get "projects" to: "projects#index"
+  get "/contact", to: "contact#index"
   
-  get 'home' => 'home#index'
-  get 'about' => 'about#index'
-  get 'blog' => 'blog#index'
-  get 'contact' => 'contact#index'
-  get 'projects' => 'projects#index'
-
   resources :projects
 
   root 'home#index'

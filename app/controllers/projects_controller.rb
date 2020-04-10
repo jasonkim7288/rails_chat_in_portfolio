@@ -9,6 +9,7 @@ class ProjectsController < ApplicationController
     @flexible_footer = "flexible-footer"
     @cur_page = Hash.new("")
     @cur_page[:project] = "cur-category"
+    render plain: @project
   end
 
   # GET /projects/1
