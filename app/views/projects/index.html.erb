@@ -19,16 +19,16 @@
                   <h2><%= project.title %></h2>
                   <%= image_tag(project.image_addr, :alt => project.image_addr) %>
                   <p>Language : <%= project.language %></p>
-                  <%= if project.p1 != nil && project.p1 != "" %>
+                  <% if project.p1 != nil && project.p1 != "" %>
                     <p><%= project.p1 %></p>
                   <% end %>
-                  <%= if project.p2 != nil && project.p2 != "" %>
+                  <% if project.p2 != nil && project.p2 != "" %>
                     <p><%= project.p2 %></p>
                   <% end %>
-                  <%= if project.p3 != nil && project.p3 != "" %>
+                  <% if project.p3 != nil && project.p3 != "" %>
                     <p><%= project.p3 %></p>
                   <% end %>
-                  <%= if project.p4 != nil && project.p4 != "" %>
+                  <% if project.p4 != nil && project.p4 != "" %>
                     <p><%= project.p4 %></p>
                   <% end %>
                   <div>
