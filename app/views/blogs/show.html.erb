@@ -25,7 +25,7 @@
                 <% 5.times do |i| %>
                     <% break if @start_id + i > @blogs.length %>
                     <% if @start_id + i == @blog.id %>
-                        <label class="cur-page"><%= "#{@start_id + 1}" %></label>
+                        <label class="cur-page"><%= "#{@start_id + i}" %></label>
                     <% else %>
                         <label><%= link_to "#{@start_id + 1}", blog_path(@start_id + i) %></label>
                     <% end %>
