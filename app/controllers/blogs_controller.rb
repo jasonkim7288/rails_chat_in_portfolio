@@ -16,6 +16,7 @@ class BlogsController < ApplicationController
     @cur_page[:blog] = "cur-category"
     @author = Author.find(@blog.author_id)
     @paragraphs = @blog.paragraphs
+    @next_id = (@blog.id + 4) / 5 * 5 + 1
   end
 
   # GET /blogs/new

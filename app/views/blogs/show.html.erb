@@ -16,13 +16,23 @@
             <% end %>
         </article>
         <div id="blog-pages-index">
-            <h2>&lt;
+            <h2>
+                <% if @blog.id < 6 %>
+                    &lt;
+                <% else %>
+                    <label><%= link_to '&lt;', blog_path((@blog.id - 1) / 5 * 5) %></label>
+                <% end %>
                 <label class="cur-page">1</label>
                 <label><a href="2020/blog_02_03.html">2</a></label>
                 <label><a href="2020/blog_09_03.html">3</a></label>
                 <label><a href="2020/blog_16_03.html">4</a></label>
                 <label><a href="2020/blog_23_03.html">5</a></label>
-                &gt;
+                <% if @next_id > @blogs.length %>
+                    &gt;
+                <% else %>
+                    <label><%= link_to '&gt;', blog_path(@next_id) %></label>
+                <% end %>
+                
             </h2>
         </div>
     </div>
