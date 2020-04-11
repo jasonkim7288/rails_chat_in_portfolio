@@ -27,7 +27,7 @@
                     <% if @start_id + i == @blog.id %>
                         <label class="cur-page"><%= "#{@start_id + i}" %></label>
                     <% else %>
-                        <label><%= link_to "#{@start_id + 1}", blog_path(@start_id + i) %></label>
+                        <label><%= link_to "#{@start_id + i}", blog_path(@start_id + i) %></label>
                     <% end %>
                 <% end %>
                 <% if @next_id > @blogs.length %>
