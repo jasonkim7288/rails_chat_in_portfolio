@@ -4,16 +4,18 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
-    @page_title = "Blog"
-    @flexible_footer = "flexible-footer"
-    @cur_page = Hash.new("")
-    @cur_page[:blog] = "cur-category"
   end
 
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    @blogs = Blog.all
+    @page_title = "Blog"
+    @flexible_footer = "flexible-footer"
+    @cur_page = Hash.new("")
+    @cur_page[:blog] = "cur-category"
+    @author = Author.find(@blogs.author_id)
+    @paragraphs = @blog.paragraphs
   end
 
   # GET /blogs/new

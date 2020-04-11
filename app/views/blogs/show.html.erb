@@ -1,24 +1,31 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @blog.author %>
-</p>
-
-<p>
-  <strong>Create date:</strong>
-  <%= @blog.create_date %>
-</p>
-
-<p>
-  <strong>Pic path:</strong>
-  <%= @blog.pic_path %>
-</p>
-
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
-<%= link_to 'Back', blogs_path %>
+<!-- blog main -->
+<main>
+    <div class="section">
+        <article class="article-one-column">
+            <h3>My new journey as a full stack developer has been started</h3>
+            <div class="author-info">
+                <%= image_tag(@author.photo_path, :alt => "Author") %>
+                <div class="author-detail">
+                    <h4><%= "#{@author.first_name} #{@author.last_name}" %></h4>
+                    <h4><%= @blog.create_date%></h4>
+                </div>
+            </div>
+            <img class="blog-main-img"
+                src="<%= @blog.pic_path %>"
+                alt="main blog image" />
+            <% for paragraph in @paragraphs do %>
+                <p><%= paragraph.content %></p>
+            <% end %>
+        </article>
+        <div id="blog-pages-index">
+            <h2>&lt;
+                <label class="cur-page">1</label>
+                <label><a href="2020/blog_02_03.html">2</a></label>
+                <label><a href="2020/blog_09_03.html">3</a></label>
+                <label><a href="2020/blog_16_03.html">4</a></label>
+                <label><a href="2020/blog_23_03.html">5</a></label>
+                &gt;
+            </h2>
+        </div>
+    </div>
+</main>
