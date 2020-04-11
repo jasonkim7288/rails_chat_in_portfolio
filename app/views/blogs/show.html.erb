@@ -2,7 +2,7 @@
 <main>
     <div class="section">
         <article class="article-one-column">
-            <h3>My new journey as a full stack developer has been started</h3>
+            <h3><%= @blog.title %></h3>
             <div class="author-info">
                 <%= image_tag(@author.photo_path, :alt => "Author") %>
                 <div class="author-detail">
@@ -10,9 +10,7 @@
                     <h4><%= @blog.create_date%></h4>
                 </div>
             </div>
-            <img class="blog-main-img"
-                src="<%= @blog.pic_path %>"
-                alt="main blog image" />
+            <%= image_tag(@blog.pic_path, :alt => "main blog image", :class => "blog-main-img") %>
             <% for paragraph in @paragraphs do %>
                 <p><%= paragraph.content %></p>
             <% end %>
