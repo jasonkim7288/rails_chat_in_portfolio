@@ -20,20 +20,20 @@
                 <% if @blog.id < 6 %>
                     <label style="color: #252525;">&lt;</label>
                 <% else %>
-                    <label><%= link_to "<", blog_path(@prev_id) %></label>
+                    <label><%= link_to "<", @prev_id %></label>
                 <% end %>
                 <% 5.times do |i| %>
                     <% break if @start_id + i > @blogs.length %>
                     <% if @start_id + i == @blog.id %>
                         <label class="cur-page"><%= "#{@start_id + i}" %></label>
                     <% else %>
-                        <label><%= link_to "#{@start_id + i}", blog_path(@start_id + i) %></label>
+                        <label><%= link_to "#{@start_id + i}", @start_id + i %></label>
                     <% end %>
                 <% end %>
                 <% if @next_id > @blogs.length %>
                     <label style="color: #252525;">&gt;</label>
                 <% else %>
-                    <label><%= link_to ">", blog_path(@next_id) %></label>
+                    <label><%= link_to ">", @next_id %></label>
                 <% end %>
                 
             </h2>
