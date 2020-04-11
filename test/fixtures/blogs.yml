@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  author: one
+  create_date: 2020-04-11
+  pic_path: MyString
+
+two:
+  title: MyString
+  author: two
+  create_date: 2020-04-11
+  pic_path: MyString
