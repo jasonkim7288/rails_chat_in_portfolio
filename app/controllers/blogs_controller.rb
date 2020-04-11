@@ -14,7 +14,7 @@ class BlogsController < ApplicationController
     @flexible_footer = "flexible-footer"
     @cur_page = Hash.new("")
     @cur_page[:blog] = "cur-category"
-    @author = Author.find(@blogs.author_id)
+    @author = Author.find(@blog.author_id)
     @paragraphs = @blog.paragraphs
   end
 
