@@ -4,5 +4,6 @@ class RoomsController < ApplicationController
     @flexible_footer = "flexible-footer"
     @cur_page = Hash.new("")
     @cur_page[:chat] = "cur-category"
+    @messages = Message.all
   end
 end
