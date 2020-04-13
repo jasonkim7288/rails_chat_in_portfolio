@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
-
-  
-  get 'rooms/show'
-
   get "/home", to: "home#index"
   get "/about", to: "about#index"
   get "/contact", to: "contact#index"
+  get "/chat", to: "rooms#show"
   
   resources :projects
   resources :blogs

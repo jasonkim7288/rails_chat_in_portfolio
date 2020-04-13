@@ -52,6 +52,14 @@
                 <div class="underscore"></div>
             </div>
             <div class="btn-wrapper">
+                <%= link_to("", chat_path , class: "hover-wrapper") %>
+                <div class="menu-icon <%= @cur_page[:chat] %>">
+                    <i class="far fa-envelope"></i>
+                </div>
+                <a href="<%= chat_path%>" class="menu-string <%= @cur_page[:chat] %>">Chat</a>
+                <div class="underscore"></div>
+            </div>
+            <div class="btn-wrapper">
                 <%= link_to("", contact_path , class: "hover-wrapper") %>
                 <div class="menu-icon <%= @cur_page[:contact] %>">
                     <i class="far fa-envelope"></i>
