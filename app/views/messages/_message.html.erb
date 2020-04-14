@@ -1,0 +1,10 @@
+<div class="message">
+    <a href="" class="message_username"><%= message.user.username %></a>
+    <span class="message_timestamp">
+        <%= message.created_at.to_datetime.strftime("%d-%m-%Y %l:%M%p") %>
+    </span>
+    <span class="message_star"></span>
+    <span class="message_content">
+        <%= message.content %>
+    </span>
+</div>

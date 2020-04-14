@@ -1,0 +1,87 @@
+// Place all the styles related to the rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.field {
+    .check-box {
+        width: 20px;
+    }
+    margin-bottom: 20px;
+}
+
+.actions {
+    width: 50px;
+    input {
+        width: 100px;
+        margin-bottom: 20px;
+    }
+}
+
+.input-box {
+    margin-bottom: 20px;
+}
+
+.chatuser-info {
+    font-size: 2em;
+    padding: 10px;
+}        
+
+.logout {
+    border: 2px solid lightgray;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.message-history {
+    align-self: flex-start;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    height: calc(100vh - var(--header-height) - var(--footer-height) - 250px);
+    min-height: 125px;
+    padding: 0 18px 1rem 1.5rem;
+    margin: 30px 0px;
+    overflow: scroll;
+    overflow-x: hidden;
+    border: 3px solid var(--selected-color);
+    border-radius: 10px;
+}
+
+.message {
+    position: relative;
+    margin-top: 0.5rem;
+    padding: 0.25rem 2rem 0.1rem 0;
+    min-height: 36px;
+}
+  
+.message_username {
+    font-weight: 600;
+    font-size: 1em;
+    padding-right: 0.25rem;
+    color: var(--default-text-color) !important;
+    margin-left: 0;
+    font-style: normal;
+    text-decoration: none;
+}
+  
+.message_timestamp {
+    text-align: left;
+    display: inline;
+    position: relative;
+    top: 0;
+    left: 0;
+    color: #9e9ea6;
+    font-size: 12px;
+    line-height: 1.2rem;
+    width: 36px;
+    margin-right: 0;
+    margin-left: 0;
+}
+  
+.message_content {
+    color: var(--default-text-color);
+    font-weight: 100;
+    display: block;
+    min-height: 1rem;
+}
