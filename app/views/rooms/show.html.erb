@@ -1,13 +1,17 @@
-<h1>Rooms#show</h1><h1>Rooms#show</h1><h1>Rooms#show</h1><h1>Rooms#show</h1><h1>Rooms#show</h1>
-
-<div class="message-history" id="messages">
-    <%= render @messages %>
-</div>
-<div class="user-menu">
-    <span class="user-menu_profile-pic"></span><span class="user-menu_username"><%= current_user.email %></span>
-    <span class="connection_status">online</span>
-    <span class="logout"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></span>
-</div>
-<div class="input-box">
-    <input type="text" class="input-box_text" id="message_input"/>
-</div>
+<main>
+    <div class="section">
+        <article class="article-one-column">
+            <div class="user-menu">
+                <h3><%= "Welcome to Jason's chat room" %></h3>
+                <label class="chatuser-info"><%= "#{current_user.username}" %></label>
+                <label class="logout"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></label>
+            </div>
+            <div class="message-history" id="messages">
+                <%= render @messages %>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-box_text" id="message_input"/>
+            </div>
+        </article>
+    </div>
+</main>
