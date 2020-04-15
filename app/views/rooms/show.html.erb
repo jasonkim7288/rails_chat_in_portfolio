@@ -2,7 +2,6 @@
     <div class="section">
         <article class="article-one-column">
             <div class="user-menu">
-                <h3><%= "Welcome to Jason's chat room" %></h3>
                 <label class="chatuser-info"><%= "#{current_user.username}" %></label>
                 <label class="logout"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></label>
             </div>
