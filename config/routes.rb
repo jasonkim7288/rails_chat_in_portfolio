@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "/about", to: "about#index"
   get "/contact", to: "contact#index"
   get "/chat", to: "rooms#show"
+  # get 'user_root', to: redirect('/chat'), as: :user_root
   
   resources :projects
   resources :blogs
