@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'pages/home'
+
+  get 'pages/about'
+
+  get 'pages/contact'
+
   devise_for :users
   get "/home", to: "home#index"
   get "/about", to: "about#index"
