@@ -1,24 +1,14 @@
-# README
+# Chatting page inside my portfolio
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Link
+### Github link : https://github.com/jasonkim7288/rails_chat_in_portfolio
+### Deploy link : http://imjasonkim.herokuapp.com/chat
 
-Things you may want to cover:
+## Description
+I decided to having a chatting page for my portfolio web site, so this is it.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Tech stack
+- Rails : main source code programming
+- Postgresql : database for storing user info and message history
+- Devise gem : user authentification
+- Heroku : deploy the code
